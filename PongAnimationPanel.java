@@ -4,6 +4,11 @@ import java.awt.image.*;
 import java.io.*;
 import javax.imageio.*;
 
+// My first swing animation game 
+// Using KeyListener, MouseMotionListener
+// Created by: Cadawas
+// December 4, 2018
+
 public class PongAnimationPanel extends JPanel{
 	// PROPERTIES
 	int intBallY = 0;
