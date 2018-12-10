@@ -9,7 +9,7 @@ public class PongProgram implements ActionListener, KeyListener{
 	Timer thetimer;
 	JLabel Player1Score;
 	JLabel Player2Score;
-	
+
 	// METHODS - ACTIONLISTENER
 	public void actionPerformed(ActionEvent evt){
 		if(evt.getSource() == thetimer){
@@ -27,7 +27,7 @@ public class PongProgram implements ActionListener, KeyListener{
 		}	
 	
 		// PLAYER 2 - PINK
-		else if(evt.getKeyCode() == 73){
+		if(evt.getKeyCode() == 73){
 			thepanel.blnGoUp2 = false;
 		}else if(evt.getKeyCode() == 75){
 			thepanel.blnGoDown2 = false;
@@ -47,14 +47,19 @@ public class PongProgram implements ActionListener, KeyListener{
 		}
 		
 		// PLAYER 2 - PINK
-		else if(evt.getKeyCode() == 73){
+		if(evt.getKeyCode() == 73){
 			thepanel.blnGoUp2 = true;
 		}else if(evt.getKeyCode() == 75){
 			thepanel.blnGoDown2 = true;
 		}
 		
 		// BALL
-		//else
+		//if(evt.getKeyCode() == 87 || evt.getKeyCode() == 83 || evt.getKeyCode() == 73 || evt.getKeyCode() == 75){
+		if(evt.getKeyCode() == 87 || evt.getKeyCode() == 83){
+			thepanel.blnGoPlay1 = true;
+		}else if(evt.getKeyCode() == 73 || evt.getKeyCode() == 75){
+			thepanel.blnGoPlay2 = true;
+		}
 		
 	}	
 		
