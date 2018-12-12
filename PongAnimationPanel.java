@@ -7,7 +7,7 @@ import javax.imageio.*;
 // My first swing animation game 
 // Using KeyListener, MouseMotionListener
 // Created by: Angelica C. F. Manansala
-// Last Updated: December 8, 2018
+// Last Updated: December 10, 2018
 
 public class PongAnimationPanel extends JPanel{
 	// PROPERTIES
@@ -39,7 +39,7 @@ public class PongAnimationPanel extends JPanel{
 		g.setColor(Color.BLACK);
 		g.fillRect(0,0,1000,500);
 		
-		// Player 1 (white)
+		// Player 1 (left)
 		g.setColor(Color.WHITE);
 		g.fillRect(50,intPaddleY,50,150);
 		
@@ -49,10 +49,9 @@ public class PongAnimationPanel extends JPanel{
 			intPaddleY = intPaddleY + 10;
 		}
 		
-		// Player 2 (pink)
-		g.setColor(Color.PINK);
+		// Player 2 (right)
+		g.setColor(Color.WHITE);
 		g.fillRect(900,intPaddleY2,50,150);
-		
 		if(blnGoUp2){
 			intPaddleY2 = intPaddleY2 - 10;
 		}else if(blnGoDown2){
@@ -61,15 +60,19 @@ public class PongAnimationPanel extends JPanel{
 		
 		// BALL 
 		if(blnGoPlay1){
-			for(intCount = 1; intCount < 21; intCount++){
-				intrandx = intrandx - 2;
+			for(intCount = 1; intCount < 5; intCount++){
+				intBallX--;
+				//intrandy = intrandy - 2;
 			}
 		}else if(blnGoPlay2){
-			intrandx = intrandx + 5;
+			for(intCount = 1; intCount < 5; intCount++){
+				intBallX++;
+				//intrandy = intrandy + 2;
+			}
 		}
 		
-		g.setColor(Color.BLUE);
-		g.fillOval(intBallX + intrandx, intBallY + intrandy, 50, 50);
+		g.setColor(Color.WHITE);
+		g.fillOval(intBallX, intBallY, 50, 50);
 		
 	}
 	

@@ -2,6 +2,11 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+// My first swing animation game 
+// Using KeyListener, MouseMotionListener
+// Created by: Angelica C. F. Manansala
+// Last Updated: December 10, 2018
+
 public class PongProgram implements ActionListener, KeyListener{
 	// PROPERTIES
 	JFrame theframe;
@@ -57,8 +62,10 @@ public class PongProgram implements ActionListener, KeyListener{
 		//if(evt.getKeyCode() == 87 || evt.getKeyCode() == 83 || evt.getKeyCode() == 73 || evt.getKeyCode() == 75){
 		if(evt.getKeyCode() == 87 || evt.getKeyCode() == 83){
 			thepanel.blnGoPlay1 = true;
+			thepanel.blnGoPlay2 = false;
 		}else if(evt.getKeyCode() == 73 || evt.getKeyCode() == 75){
 			thepanel.blnGoPlay2 = true;
+			thepanel.blnGoPlay1 = false;
 		}
 		
 	}	
@@ -84,8 +91,7 @@ public class PongProgram implements ActionListener, KeyListener{
 		Player1Score.setForeground(Color.white);
 		Player2Score.setLocation(250,250);
 		thepanel.add(Player2Score);
-		
-		
+				
 		Player1Score.addKeyListener(this);
 		Player2Score.addKeyListener(this);
 		theframe.addKeyListener(this);
