@@ -60,13 +60,7 @@ public class PongProgram implements ActionListener, KeyListener{
 		
 		// BALL
 		//if(evt.getKeyCode() == 87 || evt.getKeyCode() == 83 || evt.getKeyCode() == 73 || evt.getKeyCode() == 75){
-		if(evt.getKeyCode() == 87 || evt.getKeyCode() == 83){
-			thepanel.blnGoPlay1 = true;
-			thepanel.blnGoPlay2 = false;
-		}else if(evt.getKeyCode() == 73 || evt.getKeyCode() == 75){
-			thepanel.blnGoPlay2 = true;
-			thepanel.blnGoPlay1 = false;
-		}
+		
 		
 	}	
 		
